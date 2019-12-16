@@ -18,8 +18,8 @@ public class ManufacturedEngine implements Engine{
     this.engineMake = "Generic";
     this.engineModel = "Generic";
     this.engineCylinders = 0;
-    this.engineType = "85 AKI";
-    this.driveTrain = "2WD: Two-Wheel Drive";
+    this.engineType = "Generic";
+    this.driveTrain = "Generic";
   }
 
   public ManufacturedEngine(String engineManufacturer, Date engineManufacturedDate, String engineMake, String engineModel, int engineCylinders, String engineType, String driveTrain){
@@ -35,6 +35,34 @@ public class ManufacturedEngine implements Engine{
   @Override
   public void setEngineCylinders(int engineCylinders) {
     this.engineCylinders = engineCylinders;
+  }
+
+  public String getEngineManufacturer() {
+    return engineManufacturer;
+  }
+
+  public Date getEngineManufacturedDate() {
+    return engineManufacturedDate;
+  }
+
+  public String getEngineMake() {
+    return engineMake;
+  }
+
+  public String getEngineModel() {
+    return engineModel;
+  }
+
+  public int getEngineCylinders() {
+    return engineCylinders;
+  }
+
+  public String getEngineType() {
+    return engineType;
+  }
+
+  public String getDriveTrain() {
+    return driveTrain;
   }
 
   @Override

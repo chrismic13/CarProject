@@ -23,6 +23,6 @@ public class ExteriorFeature implements Feature{
 
   @Override
   public String toString(){
-    return "Exterior ["+exteriorFeature+"]";
+    return "Exterior ["+exteriorFeature+"]\n";
   }
 }

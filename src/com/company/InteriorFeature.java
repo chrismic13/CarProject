@@ -23,6 +23,6 @@ public class InteriorFeature implements Feature{
 
   @Override
   public String toString(){
-    return "Interior ["+interiorFeature+"]";
+    return "Interior ["+interiorFeature+"]\n";
   }
 }

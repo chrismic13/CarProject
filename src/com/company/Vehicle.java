@@ -11,22 +11,22 @@ public class Vehicle implements Engine, Chassis {
   private Chassis vehicleFrame;
   private String vehicleType;
   private String driveTrain;
-  private Engine vehicleEngine;
+  private ManufacturedEngine vehicleEngine;
 
   public Vehicle() {
     this.vehicleManufacturedDate = new Date();
-    this.vehicleManufacturer = "generic";
-    this.vehicleMake = "generic";
-    this.vehicleModel = "generic";
+    this.vehicleManufacturer = "Generic";
+    this.vehicleMake = "Generic";
+    this.vehicleModel = "Generic";
     this.vehicleFrame = new VehicleChassis();
-    this.vehicleType = "generic";
-    this.driveTrain = "generic";
+    this.vehicleType = "Generic";
+    this.driveTrain = "Generic";
     this.vehicleEngine = new ManufacturedEngine();
   }
 
   public Vehicle(Date vehicleManufacturedDate, String vehicleManufacturer,
       String vehicleMake, String vehicleModel, Chassis vehicleFrame, String vehicleType,
-      String driveTrain, Engine vehicleEngine) {
+      String driveTrain, ManufacturedEngine vehicleEngine) {
     this.vehicleManufacturedDate = vehicleManufacturedDate;
     this.vehicleManufacturer = vehicleManufacturer;
     this.vehicleMake = vehicleMake;
@@ -96,7 +96,7 @@ public class Vehicle implements Engine, Chassis {
     this.vehicleType = vehicleType;
   }
 
-  public void setVehicleEngine(Engine vehicleEngine) {
+  public void setVehicleEngine(ManufacturedEngine vehicleEngine) {
     this.vehicleEngine = vehicleEngine;
   }
 
@@ -117,12 +117,12 @@ public class Vehicle implements Engine, Chassis {
         + "\nVehicle Make : "+vehicleMake
         + "\nVehicle Model : "+vehicleModel
         + "\nVehicle Type : "+vehicleType
-        + "\nEngine Manufacturer :Generic \n"
-        + "Engine Manufactured : Thu Feb 02 01:38:31 MST 2015\n"
-        + "Engine Make : Generic\n"
-        + "Engine Model : Generic\n"
-        + "Engine Type : 88 AKI\n"
-        + "Engine Cylinders : 0\n"
-        + "Drive Train : 2WD: Two-Wheel Drive";
+        + "\nEngine Manufacturer : "+vehicleEngine.getEngineManufacturer()
+        + "\nEngine Manufactured : "+vehicleEngine.getEngineManufacturedDate()
+        + "\nEngine Make : "+vehicleEngine.getEngineMake()
+        + "\nEngine Model : "+vehicleEngine.getEngineModel()
+        + "\nEngine Type : "+vehicleEngine.getEngineType()
+        + "\nEngine Cylinders : "+vehicleEngine.getEngineCylinders()
+        + "\nDrive Train : "+vehicleEngine.getDriveTrain();
   }
 }
